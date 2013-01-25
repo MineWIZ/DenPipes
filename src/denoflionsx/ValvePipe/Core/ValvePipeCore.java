@@ -2,6 +2,7 @@ package denoflionsx.ValvePipe.Core;
 
 import denoflionsx.ValvePipe.API.ValvePipeManagers;
 import denoflionsx.ValvePipe.Actions.Extract;
+import denoflionsx.ValvePipe.Actions.Flow;
 import denoflionsx.ValvePipe.Actions.Pump;
 import denoflionsx.ValvePipe.Creative.ValvePipeTab;
 import denoflionsx.ValvePipe.Interfaces.IPipeCore;
@@ -25,6 +26,7 @@ public class ValvePipeCore implements IPipeCore{
     public static final String clazzpath = "denoflionsx.ValvePipe.Pipes.PipeRecipes";
     public static Pump pumpAction;
     public static Extract extractAction;
+    public static Flow flowAction;
     public String texture = "";
     public File configFile;
     public Configuration config;
@@ -82,8 +84,10 @@ public class ValvePipeCore implements IPipeCore{
         this.PowerPipes.createActions();
         pumpAction = new Pump();
         extractAction = new Extract();
+        flowAction = new Flow();
         ValvePipeManagers.ActionManager.registerAction(pumpAction, "Pump");
         ValvePipeManagers.ActionManager.registerAction(extractAction, "Extract");
+        ValvePipeManagers.ActionManager.registerAction(flowAction, "Flow");
     }
 
     public void print(String msg) {
