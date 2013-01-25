@@ -1,7 +1,6 @@
 package denoflionsx.ValvePipe.Pipes.PowerPipes;
 
 import buildcraft.api.gates.IAction;
-import buildcraft.core.triggers.ActionRedstoneOutput;
 import buildcraft.transport.Pipe;
 import buildcraft.transport.PipeTransport;
 import buildcraft.transport.PipeTransportPower;
